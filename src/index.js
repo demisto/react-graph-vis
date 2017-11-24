@@ -79,6 +79,9 @@ class Graph extends Component {
 
   updateGraph() {
     let container = document.getElementById(this.state.identifier);
+    if (!container) {
+      return null;
+    }
     let defaultOptions = {
       physics: {
         stabilization: false
